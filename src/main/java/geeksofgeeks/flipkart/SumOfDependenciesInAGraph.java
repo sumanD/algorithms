@@ -21,8 +21,12 @@ import java.util.LinkedList;
 
  http://www.geeksforgeeks.org/sum-dependencies-graph/
 
- Flowchart :
+ Time Complexity :
+ ================
+ O(V) - V is the number of vertices in the graph. Since we need to loop through all the vertices to identify the edges
 
+ Algorithm :
+ ==========
  1. Construct a adjacency List
  2. Add elements into it. If node A has a directed edge to node B then add an entry in the List
  3. Capture all the edges by repeating step 2
