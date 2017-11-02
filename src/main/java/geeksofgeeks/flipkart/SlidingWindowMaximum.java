@@ -1,5 +1,10 @@
 package geeksofgeeks.flipkart;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 /**
  * A long array A[] is given to you.
  * There is a sliding window of size w which is moving from the very left of the array to the very right.
@@ -37,7 +42,7 @@ public class SlidingWindowMaximum {
 
 
     // Time Complexity - O(nw) as two for loops are used
-    private int[] calculateMaxSlidingWindows(int input[], int windowSize) {
+    private int[] calculateMaxSlidingWindows(final int input[], final int windowSize) {
         int maxSlidingWindows [] = new int[input.length];
 
         // Input array is empty, So we can not find the desired result
@@ -93,6 +98,39 @@ public class SlidingWindowMaximum {
         return maxSlidingWindows;
     }
 
+
+    private List<Integer> slidingMaximum(final List<Integer> a, int b) {
+        List<Integer> slidingMaximum = new ArrayList<Integer>();
+        LinkedList<Integer> queue = new LinkedList<Integer>();
+
+        // Step : #1 Loop through the input
+        for(int i=0;i<a.size();i++) {
+
+            // Step : #2 Delete the first element from the Queue if the index is outside of the window (b)
+            if(!queue.isEmpty() && queue.getFirst() == i-b) {
+                queue.poll();
+            }
+
+            // Step : #3 Loop through the queue and delete the elements if the element at the index from queue
+            // is less than the the next element from the input list
+            while(!queue.isEmpty() && a.get(queue.getLast()) < a.get(i)) {
+                queue.removeLast();
+            }
+
+            // Step : #4 Add new element to the queue
+            queue.add(i);
+
+            // Step : #5 Get the first element which would be the highest for the window and store
+            if(i+1 >= b) {
+                Integer element = a.get(queue.peek());
+                slidingMaximum.add(i+1-b,element);
+            }
+        }
+
+        return slidingMaximum;
+    }
+
+
     private void printMaxSlidingWindow(int [] maxSlidingWindow) {
         System.out.println("Max Sliding Window .......");
 
@@ -104,12 +142,32 @@ public class SlidingWindowMaximum {
     }
 
     public static void main(String[] args) {
-        int input [] = {1,3,-1,-3,5,3,6,7};
-        int windowSize = 3;
+        int input [] = {10,9,8,7,6,5,4,3,2,1};
+        int windowSize = 2;
 
         SlidingWindowMaximum slidingWindowMaximum = new SlidingWindowMaximum();
         int maxSlidingWindow [] = slidingWindowMaximum.calculateMaxSlidingWindows(input,windowSize);
-
         slidingWindowMaximum.printMaxSlidingWindow(maxSlidingWindow);
+
+        System.out.println();
+
+
+        // O(N) SOLUTION
+
+        //  648, 614, 490, 138, 657, 544, 745, 582, 738, 229,
+        List<Integer> a = new ArrayList<Integer>();
+        a.add(648);
+        a.add(614);
+        a.add(490);
+        a.add(138);
+        a.add(657);
+        a.add(544);
+        a.add(745);
+        a.add(582);
+        a.add(738);
+        a.add(229);
+
+        List<Integer> slidingWindow = slidingWindowMaximum.slidingMaximum(a,9);
+        System.out.println("QUEUE VERSION = "+slidingWindow);
     }
 }
