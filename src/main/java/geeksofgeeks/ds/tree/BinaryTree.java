@@ -1,5 +1,8 @@
 package geeksofgeeks.ds.tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTree {
     Node root;
 
@@ -36,6 +39,25 @@ public class BinaryTree {
         System.out.print(node.key + " ");
     }
 
+    public void BreathFastSearch(Node node ){
+        if(node == null ){
+            return;
+        }
+
+        Queue<Node> queue = new LinkedList<Node>();
+
+        Node tempNode = node;
+
+        while (tempNode != null ){
+            System.out.print(node.key + " ");
+
+            queue.add(node.left);
+            queue.add(node.right);
+
+            tempNode = queue.poll();
+        }
+    }
+
     public static void main(String[] args) {
 
         Node root = new Node(1);
@@ -55,6 +77,10 @@ public class BinaryTree {
         System.out.println();
         System.out.println("Postorder Traversal :-");
         binaryTree.postorderTraversal(binaryTree.root);
+
+        System.out.println();
+        System.out.println("Breath Fast Charge : - ");
+        binaryTree.BreathFastSearch(binaryTree.root);
     }
 
 }
