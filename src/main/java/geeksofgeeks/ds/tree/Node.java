@@ -22,4 +22,16 @@ public class Node {
     public void setRightNode(Node node) {
         this.right = node;
     }
+
+    public int getKey() {
+        return key;
+    }
+
+    public Node getLeft() {
+        return left;
+    }
+
+    public Node getRight() {
+        return right;
+    }
 }
