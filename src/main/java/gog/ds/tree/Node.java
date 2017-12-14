@@ -1,4 +1,4 @@
-package geeksofgeeks.ds.tree;
+package gog.ds.tree;
 
 public class Node {
     int key;

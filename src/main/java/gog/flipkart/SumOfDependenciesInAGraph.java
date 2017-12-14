@@ -1,4 +1,4 @@
-package geeksofgeeks.flipkart;
+package gog.flipkart;
 
 
 import java.util.LinkedList;

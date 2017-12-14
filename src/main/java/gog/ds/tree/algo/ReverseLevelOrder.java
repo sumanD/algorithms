@@ -1,7 +1,7 @@
-package geeksofgeeks.ds.tree.algo;
+package gog.ds.tree.algo;
 
 
-import geeksofgeeks.ds.tree.Node;
+import gog.ds.tree.Node;
 
 import java.util.LinkedList;
 import java.util.Queue;

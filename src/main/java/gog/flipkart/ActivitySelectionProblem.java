@@ -1,4 +1,4 @@
-package geeksofgeeks.flipkart;
+package gog.flipkart;
 
 /**
  * You are given n activities with their start and finish times.

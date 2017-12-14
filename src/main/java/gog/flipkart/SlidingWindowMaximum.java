@@ -1,9 +1,8 @@
-package geeksofgeeks.flipkart;
+package gog.flipkart;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 /**
  * A long array A[] is given to you.

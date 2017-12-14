@@ -1,4 +1,4 @@
-package geeksofgeeks.ds.String;
+package gog.ds.String;
 
 public class KMP {
     public static void patternMatch(String txt, String pat) {

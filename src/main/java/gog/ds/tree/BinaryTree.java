@@ -1,4 +1,4 @@
-package geeksofgeeks.ds.tree;
+package gog.ds.tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
