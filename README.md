@@ -1,4 +1,6 @@
-# README #
+# SOL #
+
+### Introduction ###
 
 Our main object is to solve algorithmic problems. It becomes very easy if we can divide the problem into the following
 to-do lists.
