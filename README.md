@@ -9,8 +9,8 @@ to-do lists.
     *1 Constrains evaluation
 
     *2 Idea Generation (Time & Space Complexity)
-        *2.1
-        *2.2
+        *2.1 Idea #1
+        *2.2 Idea #2
 
     *3 Code Implementation
 
