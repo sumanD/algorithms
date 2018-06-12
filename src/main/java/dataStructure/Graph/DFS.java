@@ -8,7 +8,6 @@ import java.util.Queue;
  * DFS traversal algorithm implementation
  */
 public class DFS {
-
     /**
      * Depth first search recursively
      * @param gNode
