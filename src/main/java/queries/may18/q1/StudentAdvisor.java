@@ -1,4 +1,4 @@
-package chegg.may18.q1;
+package queries.may18.q1;
 
 import java.util.Scanner;
 

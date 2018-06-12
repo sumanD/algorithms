@@ -1,4 +1,4 @@
-package chegg.apr18.q9;
+package queries.apr18.q9;
 
 /**
  * Payment Type for Full payment option

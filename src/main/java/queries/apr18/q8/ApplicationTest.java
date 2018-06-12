@@ -1,6 +1,6 @@
-package chegg.apr18.q8;
+package queries.apr18.q8;
 
-import chegg.mar18.q30.HashMap;
+import queries.mar18.q30.HashMap;
 
 /**
  * Test Class

@@ -1,4 +1,4 @@
-package chegg.apr18.q8;
+package queries.apr18.q8;
 
 import java.util.List;
 

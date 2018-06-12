@@ -1,4 +1,4 @@
-package chegg.apr18.q8;
+package queries.apr18.q8;
 
 /**
  * Represent a Single share Entity

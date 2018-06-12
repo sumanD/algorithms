@@ -1,4 +1,4 @@
-package chegg.apr18.q9;
+package queries.apr18.q9;
 
 /**
  * Enum which represents the status of different payments
